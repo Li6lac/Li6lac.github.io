@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-02-18T06:32:36.224Z</updated>
+  <updated>2020-02-19T06:24:09.480Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello</title>
-    <link href="https://lilac18.cn/2020/02/18/Hello/"/>
-    <id>https://lilac18.cn/2020/02/18/Hello/</id>
-    <published>2020-02-18T06:30:59.000Z</published>
-    <updated>2020-02-18T06:32:36.224Z</updated>
+    <title>test</title>
+    <link href="https://lilac18.cn/2020/02/19/test/"/>
+    <id>https://lilac18.cn/2020/02/19/test/</id>
+    <published>2020-02-19T02:28:33.000Z</published>
+    <updated>2020-02-19T06:24:09.480Z</updated>
     
-    <content type="html"><![CDATA[<p>I‘m lilac.哈哈</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/.cn//D:%5CBlog%5Csource_posts%5Ctest%5C1.JPG" alt="image_test"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;I‘m lilac.哈哈&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/.cn//D:%5CBlog%5Csource_posts%5Ctest%5C1.JPG&quot; alt=&quot;image_test&quot;&gt;&lt;/p&gt;
 
       
     
@@ -37,26 +37,30 @@
     
     
     
+      <category term="image_test" scheme="https://lilac18.cn/tags/image-test/"/>
+    
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://lilac18.cn/2020/02/18/hello-world/"/>
-    <id>https://lilac18.cn/2020/02/18/hello-world/</id>
-    <published>2020-02-18T06:14:18.896Z</published>
-    <updated>2020-02-18T06:14:18.896Z</updated>
+    <title>Hello,Hexo</title>
+    <link href="https://lilac18.cn/2020/02/18/Hello/"/>
+    <id>https://lilac18.cn/2020/02/18/Hello/</id>
+    <published>2020-02-18T06:30:59.000Z</published>
+    <updated>2020-02-19T02:12:57.486Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="这是我第一次使用博客，也是第一次使用markdown"><a href="#这是我第一次使用博客，也是第一次使用markdown" class="headerlink" title="这是我第一次使用博客，也是第一次使用markdown"></a>这是我第一次使用博客，也是第一次使用markdown</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;h3 id=&quot;这是我第一次使用博客，也是第一次使用markdown&quot;&gt;&lt;a href=&quot;#这是我第一次使用博客，也是第一次使用markdown&quot; class=&quot;headerlink&quot; title=&quot;这是我第一次使用博客，也是第一次使用markdown&quot;&gt;&lt;/a&gt;这是我第一次使用
       
     
     </summary>
     
+    
+      <category term="博客入门" scheme="https://lilac18.cn/categories/%E5%8D%9A%E5%AE%A2%E5%85%A5%E9%97%A8/"/>
     
     
   </entry>
