@@ -127,12 +127,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">3</span></a>
 
   </li>
   </ul>
@@ -157,6 +157,89 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lilac18.cn/2020/02/22/20WR2-22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lilac">
+      <meta itemprop="description" content="Strengthen Yourself To Be Against World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lilac's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/22/20WR2-22/" class="post-title-link" itemprop="url">20WR2-22</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-22 12:18:44 / 修改时间：12:19:38" itemprop="dateCreated datePublished" datetime="2020-02-22T12:18:44+08:00">2020-02-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/week-reports/" itemprop="url" rel="index">
+                    <span itemprop="name">week reports</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="本周科研工作"><a href="#本周科研工作" class="headerlink" title="本周科研工作"></a>本周科研工作</h3><span class="label success">1，实现了GBF原型</span>
+
+<p>碰到的问题，秘密共享使用的是异或，存储非整型数据时需要想办法解决。初步采取hash投映为整型。由于证书的数据结构未知，且存储到布隆过滤器的表示方式未知，后续问题后续结合实际解决。</p>
+<span class="label success">2，完成了以太坊部署</span>
+
+<span class="label success">3，初步明白了智能合约线上开发环境的运转过程</span>
+
+<p>但是线下智能合约的环境还有问题待解决。</p>
+<span class="label success">4，阅读论文</span>
+
+<p>《Xor Filters: Faster and Smaller Than Bloom and Cuckoo Filters》2019未发表。</p>
+<p>本文构造了一个比布隆过滤器更快的异或过滤器。主要思路是：将集合S中所有元素x的指纹f(x)（由随机哈希函数生成）存放到数组B中。有三个哈希函数h0,h1,h2。三个哈希函数值域平分|B|（|B|&gt;|S|）。试图找到B[h0(x)] xor B[h1(x)] xor B[h2(x)]=f(x)。构造过程主要是利用一个临时数组H，选定一组h0,h1,h2,在H[h0(x)]、H[h1(x)]、H[h2(x)]存放x。集合S所有元素完成存放之后，找H中存放单个元素的位置，记录到一个队列里。遍历队列，将位置和元素存放到栈里。如果栈大小与S相同，进行存放。不成功重新选取哈希函数组。概括来说与元素x相关联的位置i为h0(x),h1(x),h2(x)之一。重新构造B，在i的位置存放f(x) xor B[h0(x)] xor B[h1(x)] xor B[h2(x)]。但是我感觉文中的几个算法有问题，逻辑想不通。尤其最后存放这一步很奇怪，我思考觉得有一定问题。</p>
+<h3 id="下周科研计划"><a href="#下周科研计划" class="headerlink" title="下周科研计划"></a>下周科研计划</h3><span class="label primary">完成智能合约线下开发环境搭建</span>  
+<span class="label primary">完善JS学习，继续学习Solidity 并动手实践</span>   
+<span class="label primary">查询资料了解布隆过滤器等相关应用场景</span>  
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -358,14 +441,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
