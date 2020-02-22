@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WR-20.2.22</title>
+    <url>/2020/02/22/20WD-20-2-22/</url>
+    <content><![CDATA[<h3 id="本周科研工作"><a href="#本周科研工作" class="headerlink" title="本周科研工作"></a>本周科研工作</h3><span class="label default">1</span>
+
+<p>1，实现了GBF原型。碰到问题，秘密共享使用的是异或，存储非整型数据时需要想办法解决。初步采取hash投映为整型。由于证书的数据结构未知，且存储到布隆过滤器的表示方式未知，后续问题后续结合实际解决。</p>
+<p>2，完成了以太坊部署。</p>
+<p>3，线上开发环境初步明白了智能合约的运转过程。但是线下智能合约的环境还有问题待解决。</p>
+<p>4，阅读论文《Xor Filters: Faster and Smaller Than Bloom and Cuckoo Filters  》2019未发表。</p>
+]]></content>
+      <categories>
+        <category>Week Report</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WR-20.2.22</title>
+    <url>/2020/02/22/WR20_2_22/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Week Report</category>
+      </categories>
+  </entry>
+  <entry>
     <title>test</title>
     <url>/2020/02/19/test/</url>
     <content><![CDATA[<p><img src="/.cn//D:%5CBlog%5Csource_posts%5Ctest%5C1.JPG" alt="image_test"></p>

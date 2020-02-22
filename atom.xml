@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-02-19T06:24:09.480Z</updated>
+  <updated>2020-02-22T03:31:45.145Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WR-20.2.22</title>
+    <link href="https://lilac18.cn/2020/02/22/20WD-20-2-22/"/>
+    <id>https://lilac18.cn/2020/02/22/20WD-20-2-22/</id>
+    <published>2020-02-22T03:13:36.000Z</published>
+    <updated>2020-02-22T03:31:45.145Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="本周科研工作"><a href="#本周科研工作" class="headerlink" title="本周科研工作"></a>本周科研工作</h3><span class="label default">1</span><p>1，实现了GBF原型。碰到问题，秘密共享使用的是异或，存储非整型数据时需要想办法解决。初步采取hash投映为整型。由于证书的数据结构未知，且存储到布隆过滤器的表示方式未知，后续问题后续结合实际解决。</p><p>2，完成了以太坊部署。</p><p>3，线上开发环境初步明白了智能合约的运转过程。但是线下智能合约的环境还有问题待解决。</p><p>4，阅读论文《Xor Filters: Faster and Smaller Than Bloom and Cuckoo Filters  》2019未发表。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;本周科研工作&quot;&gt;&lt;a href=&quot;#本周科研工作&quot; class=&quot;headerlink&quot; title=&quot;本周科研工作&quot;&gt;&lt;/a&gt;本周科研工作&lt;/h3&gt;&lt;span class=&quot;label default&quot;&gt;1&lt;/span&gt;
+
+&lt;p&gt;1，实现了GBF原型。碰到问题，
+      
+    
+    </summary>
+    
+    
+      <category term="Week Report" scheme="https://lilac18.cn/categories/Week-Report/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WR-20.2.22</title>
+    <link href="https://lilac18.cn/2020/02/22/WR20_2_22/"/>
+    <id>https://lilac18.cn/2020/02/22/WR20_2_22/</id>
+    <published>2020-02-22T03:13:36.000Z</published>
+    <updated>2020-02-22T03:14:58.736Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Week Report" scheme="https://lilac18.cn/categories/Week-Report/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>test</title>
