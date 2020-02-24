@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-02-24T07:52:45.071Z</updated>
+  <updated>2020-02-24T08:55:35.644Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>image-test</title>
+    <link href="https://lilac18.cn/2020/02/24/image-test/"/>
+    <id>https://lilac18.cn/2020/02/24/image-test/</id>
+    <published>2020-02-24T08:53:53.000Z</published>
+    <updated>2020-02-24T08:55:35.644Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200224165526-395579.jpeg" alt="1"></p>]]></content>
+    
+    <summary type="html">
+    
+      test image
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://lilac18.cn/categories/hexo/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>WR20-2-22</title>
@@ -38,21 +59,6 @@
     
     
       <category term="week report" scheme="https://lilac18.cn/categories/week-report/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://lilac18.cn/2020/02/24/test/"/>
-    <id>https://lilac18.cn/2020/02/24/test/</id>
-    <published>2020-02-24T07:04:57.000Z</published>
-    <updated>2020-02-24T07:04:57.997Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
     
   </entry>

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>image-test</title>
+    <url>/2020/02/24/image-test/</url>
+    <content><![CDATA[<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200224165526-395579.jpeg" alt="1"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WR20-2-22</title>
     <url>/2020/02/24/WR20-2-22/</url>
     <content><![CDATA[<h3 id="本周科研工作"><a href="#本周科研工作" class="headerlink" title="本周科研工作"></a>本周科研工作</h3><span class="label success">1,实现了GBF原型</span>
@@ -22,11 +31,6 @@
       <categories>
         <category>week report</category>
       </categories>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2020/02/24/test/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hello,Hexo</title>
