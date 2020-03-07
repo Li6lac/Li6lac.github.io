@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WR20-3-7</title>
+    <url>/2020/03/07/WR20-3-7/</url>
+    <content><![CDATA[<h3 id="科研工作"><a href="#科研工作" class="headerlink" title="科研工作"></a>科研工作</h3><span class="label success">1,web3接口学习</span>
+
+<p>利用web3对合约进行编译、部署、测试。掌握基本用法。remix比本地solc编译器简单易用。但是利用remix开发会比较繁琐。寻求更为实用的开发框架和环境。</p>
+<span class="label success">2,solidity学习</span>
+
+<p>对智能合约的特性及区块链特殊用途还需进一步学习。</p>
+<span class="label success">3,思考学姐方案需求，进行简单gas花费测试</span>
+
+<p>影响gas的诸多因素没考虑清楚，直接利用remix默认手续费进行简单测试，测试结果只能作为参考。</p>
+<span class="label success">3,阅读论文</span>
+
+<p>《The mathematics of bitcoin》2020未发表。</p>
+<p>本文是一篇偏数学的文章。在数学的角度对比特币进行分析。引入了很多经济学的概念和形式化定义。鞅理论、马尔科夫链、戴克词等。1，挖矿。挖每个区块的时间服从指数分布，挖n个区块时间服从n重卷积指数分布。区块数和平均出块时间服从伽马分布。验证区块时间服从泊松分布。2，双花问题。整理前人结论，数学角度证明攻击成功率随着确认区块增加而减少。3，挖矿收益。挖矿策略的收益参考伽马分布值。证明了在难度值不变的情况下，最佳挖矿策略是尽快发布。4，难度值不可调控时最好的挖矿策略是尽快发布。文章之后讲的自私挖矿策略及戴克词等没太看懂。本文主要启发人们比特币中的数学问题。</p>
+<h3 id="下周科研计划"><a href="#下周科研计划" class="headerlink" title="下周科研计划"></a>下周科研计划</h3><span class="label primary">了解Truffle框架并考虑实用性</span><br>
+
+<span class="label primary">完善solidity学习，继续web3学习</span><br>
+
+<span class="label primary">结合实例实践智能合约场景和web3</span>]]></content>
+      <categories>
+        <category>week report</category>
+      </categories>
+  </entry>
+  <entry>
     <title>image-test</title>
     <url>/2020/02/24/image-test/</url>
     <content><![CDATA[<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200224165526-395579.jpeg" alt="1"></p>
