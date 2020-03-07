@@ -5,13 +5,13 @@
     <url>/2020/03/07/WR20-3-7/</url>
     <content><![CDATA[<h3 id="科研工作"><a href="#科研工作" class="headerlink" title="科研工作"></a>科研工作</h3><span class="label success">1,web3接口学习</span>
 
-<p>利用web3对合约进行编译、部署、测试。掌握基本用法。remix比本地solc编译器简单易用。但是利用remix开发会比较繁琐。寻求更为实用的开发框架和环境。</p>
+<p>remix比本地solc编译器简单易用，但是利用remix开发会比较繁琐。利用web3对合约进行编译、部署、测试。寻求更为实用的开发框架和环境。</p>
 <span class="label success">2,solidity学习</span>
 
-<p>对智能合约的特性及区块链特殊用途还需进一步学习。</p>
+<p>结合案例进一步学习。</p>
 <span class="label success">3,思考学姐方案需求，进行简单gas花费测试</span>
 
-<p>影响gas的诸多因素没考虑清楚，直接利用remix默认手续费进行简单测试，测试结果只能作为参考。</p>
+<p>对存储简单状态变量进行测试，影响gas的诸多因素没考虑清楚，测试结果只能作为参考。</p>
 <span class="label success">3,阅读论文</span>
 
 <p>《The mathematics of bitcoin》2020未发表。</p>
