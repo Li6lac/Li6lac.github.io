@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WR20-3-14</title>
+    <url>/2020/03/14/WR20-3-14/</url>
+    <content><![CDATA[<h3 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h3><p>1，web3新版官方文档学习。发现web3版本冲突的问题，之前旧版本的0.2.0。新版本1.0.0改动较大。涉及到异步和合约编译部署及区块链交互的地方更改较多，网上教程杂乱，选择官方文档选择性学习。</p>
+<p>2，学习solidity官方文档的常见模式。之前solidity学习基本语法和实例略过了一些语言特性。关于solidity的提款模式和限制模式进一步学习。整体感觉solidity虽然可以在EVM编程，但实际限制很多，大多数人利用solidity开发dapp。</p>
+<p>3，学习Truffle的使用方法及应用流程。可以极大程度简化合约编译和部署。但是更多倾向于类似于前端的Dapp开发。后续根据需求决定采用与否。</p>
+<p>4，之前的区块链以node作为服务端，通过写入写出的智能合约与以太坊交互。好处是可以解耦合。现在可以直接利用web3与区块链写入写出。后续考虑采取哪种方式。</p>
+<p>5，发现web3更偏向于nodejs。补充学习，和js更多的是语法上相同，但实际的用法差异较大。</p>
+<h3 id="下周计划"><a href="#下周计划" class="headerlink" title="下周计划"></a>下周计划</h3><p>1，继续学习web3 1.0官方文档</p>
+<p>2，寻找更加便捷好用的solidity开发工具</p>
+<p>3，了解GANACHE，当前部署和测试直接在私有链进行，打算利用GANACHE作为测试私有链，了解并测试考虑可用性</p>
+<p>4，针对时间完善Truffle学习，了解Dapp。</p>
+]]></content>
+      <categories>
+        <category>week report</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WR20-3-7</title>
     <url>/2020/03/07/WR20-3-7/</url>
     <content><![CDATA[<h3 id="科研工作"><a href="#科研工作" class="headerlink" title="科研工作"></a>科研工作</h3><span class="label success">1,web3接口学习</span>
@@ -8,7 +25,7 @@
 <p>remix比本地solc编译器简单易用，但是利用remix开发会比较繁琐。利用web3对合约进行编译、部署、测试。寻求更为实用的开发框架和环境。</p>
 <span class="label success">2,solidity学习</span>
 
-<p>结合案例进一步学习。</p>
+<p>结合实例进一步学习。</p>
 <span class="label success">3,思考学姐方案需求，进行简单gas花费测试</span>
 
 <p>对存储简单状态变量进行测试，影响gas的诸多因素没考虑清楚，测试结果只能作为参考。</p>

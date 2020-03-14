@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-03-07T09:02:05.563Z</updated>
+  <updated>2020-03-14T03:01:58.226Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WR20-3-14</title>
+    <link href="https://lilac18.cn/2020/03/14/WR20-3-14/"/>
+    <id>https://lilac18.cn/2020/03/14/WR20-3-14/</id>
+    <published>2020-03-14T02:19:12.000Z</published>
+    <updated>2020-03-14T03:01:58.226Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h3><p>1，web3新版官方文档学习。发现web3版本冲突的问题，之前旧版本的0.2.0。新版本1.0.0改动较大。涉及到异步和合约编译部署及区块链交互的地方更改较多，网上教程杂乱，选择官方文档选择性学习。</p><p>2，学习solidity官方文档的常见模式。之前solidity学习基本语法和实例略过了一些语言特性。关于solidity的提款模式和限制模式进一步学习。整体感觉solidity虽然可以在EVM编程，但实际限制很多，大多数人利用solidity开发dapp。</p><p>3，学习Truffle的使用方法及应用流程。可以极大程度简化合约编译和部署。但是更多倾向于类似于前端的Dapp开发。后续根据需求决定采用与否。</p><p>4，之前的区块链以node作为服务端，通过写入写出的智能合约与以太坊交互。好处是可以解耦合。现在可以直接利用web3与区块链写入写出。后续考虑采取哪种方式。</p><p>5，发现web3更偏向于nodejs。补充学习，和js更多的是语法上相同，但实际的用法差异较大。</p><h3 id="下周计划"><a href="#下周计划" class="headerlink" title="下周计划"></a>下周计划</h3><p>1，继续学习web3 1.0官方文档</p><p>2，寻找更加便捷好用的solidity开发工具</p><p>3，了解GANACHE，当前部署和测试直接在私有链进行，打算利用GANACHE作为测试私有链，了解并测试考虑可用性</p><p>4，针对时间完善Truffle学习，了解Dapp。</p>]]></content>
+    
+    <summary type="html">
+    
+      周报 20-3-14
+    
+    </summary>
+    
+    
+      <category term="week report" scheme="https://lilac18.cn/categories/week-report/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>WR20-3-7</title>
     <link href="https://lilac18.cn/2020/03/07/WR20-3-7/"/>
     <id>https://lilac18.cn/2020/03/07/WR20-3-7/</id>
     <published>2020-03-07T07:38:04.000Z</published>
-    <updated>2020-03-07T09:02:05.563Z</updated>
+    <updated>2020-03-07T09:05:56.381Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="科研工作"><a href="#科研工作" class="headerlink" title="科研工作"></a>科研工作</h3><span class="label success">1,web3接口学习</span><p>remix比本地solc编译器简单易用，但是利用remix开发会比较繁琐。利用web3对合约进行编译、部署、测试。寻求更为实用的开发框架和环境。</p><span class="label success">2,solidity学习</span><p>结合案例进一步学习。</p><span class="label success">3,思考学姐方案需求，进行简单gas花费测试</span><p>对存储简单状态变量进行测试，影响gas的诸多因素没考虑清楚，测试结果只能作为参考。</p><span class="label success">3,阅读论文</span><p>《The mathematics of bitcoin》2020未发表。</p><p>本文是一篇偏数学的文章。在数学的角度对比特币进行分析。引入了很多经济学的概念和形式化定义。鞅理论、马尔科夫链、戴克词等。1，挖矿。挖每个区块的时间服从指数分布，挖n个区块时间服从n重卷积指数分布。区块数和平均出块时间服从伽马分布。验证区块时间服从泊松分布。2，双花问题。整理前人结论，数学角度证明攻击成功率随着确认区块增加而减少。3，挖矿收益。挖矿策略的收益参考伽马分布值。证明了在难度值不变的情况下，最佳挖矿策略是尽快发布。4，难度值不可调控时最好的挖矿策略是尽快发布。文章之后讲的自私挖矿策略及戴克词等没太看懂。本文主要启发人们比特币中的数学问题。</p><h3 id="下周科研计划"><a href="#下周科研计划" class="headerlink" title="下周科研计划"></a>下周科研计划</h3><span class="label primary">了解Truffle框架并考虑实用性</span><br><span class="label primary">完善solidity学习，继续web3学习</span><br><span class="label primary">结合实例实践智能合约场景和web3</span>]]></content>
+    <content type="html"><![CDATA[<h3 id="科研工作"><a href="#科研工作" class="headerlink" title="科研工作"></a>科研工作</h3><span class="label success">1,web3接口学习</span><p>remix比本地solc编译器简单易用，但是利用remix开发会比较繁琐。利用web3对合约进行编译、部署、测试。寻求更为实用的开发框架和环境。</p><span class="label success">2,solidity学习</span><p>结合实例进一步学习。</p><span class="label success">3,思考学姐方案需求，进行简单gas花费测试</span><p>对存储简单状态变量进行测试，影响gas的诸多因素没考虑清楚，测试结果只能作为参考。</p><span class="label success">3,阅读论文</span><p>《The mathematics of bitcoin》2020未发表。</p><p>本文是一篇偏数学的文章。在数学的角度对比特币进行分析。引入了很多经济学的概念和形式化定义。鞅理论、马尔科夫链、戴克词等。1，挖矿。挖每个区块的时间服从指数分布，挖n个区块时间服从n重卷积指数分布。区块数和平均出块时间服从伽马分布。验证区块时间服从泊松分布。2，双花问题。整理前人结论，数学角度证明攻击成功率随着确认区块增加而减少。3，挖矿收益。挖矿策略的收益参考伽马分布值。证明了在难度值不变的情况下，最佳挖矿策略是尽快发布。4，难度值不可调控时最好的挖矿策略是尽快发布。文章之后讲的自私挖矿策略及戴克词等没太看懂。本文主要启发人们比特币中的数学问题。</p><h3 id="下周科研计划"><a href="#下周科研计划" class="headerlink" title="下周科研计划"></a>下周科研计划</h3><span class="label primary">了解Truffle框架并考虑实用性</span><br><span class="label primary">完善solidity学习，继续web3学习</span><br><span class="label primary">结合实例实践智能合约场景和web3</span>]]></content>
     
     <summary type="html">
     
