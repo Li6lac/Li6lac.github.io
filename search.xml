@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WR20-3-21</title>
+    <url>/2020/03/21/WR20-3-21/</url>
+    <content><![CDATA[<h3 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h3><p>1，web3和Truffle分别测试部署简单合约到GANACHE没出现问题。但是部署到实际的Geth发现问题。更改web3版本和部署代码及Geth版本，问题未得到解决，资料较少，打算重新部署Geth进行尝试。</p>
+<p>2，GANACHE要作为测试链优点是少去了的挖矿打包的过程，缺点是是模拟的每次重启会刷新。</p>
+<p>3，web3 1.0学习，Nodejs学习。</p>
+<h3 id="论文阅读"><a href="#论文阅读" class="headerlink" title="论文阅读"></a>论文阅读</h3><h4 id="FastKitten-Practical-Smart-Contracts-on-Bitcoin-USENIX-2019"><a href="#FastKitten-Practical-Smart-Contracts-on-Bitcoin-USENIX-2019" class="headerlink" title="FastKitten: Practical Smart Contracts on Bitcoin (USENIX 2019)"></a>FastKitten: Practical Smart Contracts on Bitcoin (USENIX 2019)</h4><p><strong>问题描述：</strong>区块链上的智能合约本质上是区块链上的代码，能够进行逻辑运算。比如可以使用智能合约实现上图所示的扑克牌游戏，三个玩家分别向智能合约输入自己的牌，然后智能合约进行逻辑运算，确定赢家，输出结果。但是当前区块链最成功的应用之一比特币不支持智能合约。是否可以让比特币网络支持智能合约？</p>
+<p><strong>论文贡献</strong>本论文针对比特币网络提出了一个能够在链外执行（off-chain execution）且能执行多个轮回（multi-round）的高效的智能合约协议FastKitten，它具有强的隐私和安全性以及速度快的特点。</p>
+<p><strong>主体方案</strong></p>
+<p><em>1 可执行环境</em></p>
+<p>​        一个理想的TEE可以理解为一个沙盒，任何人都不能改变和窥探里面的执行逻辑和状态信息。一个TEE能够保证其中的逻辑代码被正确执行，维护其中的隐私状态，并且能够提供TEE中的程序被正确设置的证明。</p>
+<p><em>2 FastKitten协议</em></p>
+<p>​        该协议可以分为四个主体，分别为TEE，Operator，Parties和区块链。可以把TEE理解为一台特殊的服务器，Operator便是这台服务器的拥有者；Parties是活动的参与者，比如打扑克牌的三个人；区块链就是比特币中的区块链。FastKitten协议分为三个阶段。 </p>
+<p>（1）(1)  Setup阶段</p>
+<p>​        Operator提交惩罚押金给智能合约。把Operator的惩罚押金转给每一个parties，但是它time-lock的，只有到了timeout的时间之后，该交易的输出金额才能被parties花费掉。对于各个Party，她们通过验证Operator发过来的数据，知道Operator已经提交了押金，以及TEE已经设置好了。于是她们向智能合约提交惩罚押金。</p>
+<p>（2）Round阶段</p>
+<p>1）各个parties通过Operator向TEE发送智能合约的输入数据，</p>
+<p>2）TEE计算得到结果，</p>
+<p>3）通过Operator向各个parties返回TEE的计算结果。</p>
+<p>​        这个过程可以根据需要重复多次。所有在网络中传输的数据都通过程TLS来加密，因此Operator无法知道parties的输入内容和TEE的计算结果。round阶段不用访问区块链的。</p>
+<p>（3）finalize阶段</p>
+<p>​        上一个阶段智能合约执行了其中的代码逻辑，得到了扑克牌游戏的赢家，需要发布结果。Operator通过TEE的最终计算结果的输出向区块链发起一个交易，用于向Operator和各个parties退还押金以及向赢家发送相关报酬等。这一步的操作写到区块链中，防止篡改和欺骗。</p>
+<p><strong>作恶</strong>  </p>
+<p>​    可以归结为两种，一种是篡改数据，第二种是丢弃数据或者故意停止工作。前者可以通过数字签名来解决。论文主要讲解后者。</p>
+<p>（1）   情况1，operator作恶</p>
+<p>如果Operator故意丢弃数据或者故意停止服务，那么其之前所提交的押金在timeout之后被各个parties消费掉，以此来惩罚operator。</p>
+<p>（2）   情况2，party作恶</p>
+<p>​        比如Alice故意停止工作，没有给Operator发送TEE所需要的input数据。这时候TEE没有收到Alice的input数据，但是TEE不确定是Operator丢弃了该数据还是Alice没有发送。Operator为了证明自己的清白，它向区块链发起一个challenge交易，该交易的输入是Operator自己的一些未花费的钱，输出是Alice的地址，并且有一个数据域Data，里面存储了在当前round中TEE计算结果的输出值 。如果Alice没有作恶，只是她发给Operator的input数据在网络传输途中丢失了。这时候，Alice需要证明自己的清白，需要回应Operator所发起的challenge交易。Alice需要时时检查有没有发给自己的challenge交易，如果有，需要向区块链发起一个交易，作为对应challenge交易的回应。该response交易的输入是Operator发给Alice的钱，输出是Operator的地址，目的是把这个钱返还给Operator，并且其数据域Data是发送给TEE的input数据。这样，Operator检查到Alice的回应之后，就能够从区块链中拿到这个input数据，然后转发给TEE，TEE正常执行。如果在Operator发起 过了一定的时间之后Alice还是没有反应，那么TEE中的智能合约就能够断定Alice作恶，因此没收Alice的押金，结束协议。</p>
+<p>​        没收Alice的押金：通过向区块链发起一个交易,其输出包含Operator的地址和除了Alice的其它parties的地址。</p>
+<h3 id="下周计划"><a href="#下周计划" class="headerlink" title="下周计划"></a>下周计划</h3><p>1，Solidity学习不够深入，需强化理解本质。</p>
+<p>2，解决当前部署遇到的问题。</p>
+<p>3，GANACHE的本地存储。</p>
+]]></content>
+      <categories>
+        <category>week report</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WR20-3-14</title>
     <url>/2020/03/14/WR20-3-14/</url>
     <content><![CDATA[<h3 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h3><p>1，web3新版官方文档学习。发现web3版本冲突的问题，之前旧版本的0.2.0。新版本1.0.0改动较大。涉及到异步和合约编译部署及区块链交互的地方更改较多，网上教程杂乱，选择官方文档选择性学习。</p>
