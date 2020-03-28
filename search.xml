@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WR20-3-28</title>
+    <url>/2020/03/28/WR20-3-28/</url>
+    <content><![CDATA[<h3 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h3><p>1，合约部署的报错属于BUG，web3和最新的Solidity会出现Bug。Github报错大多数都是不同版本，没有有效的解决办法。当前web3仍然问题很多，等待Web3更新。最终只能切换0.4版本的Solidity，没有出现报错。但是0.4版本的Solidity很旧问题很多，只能作为学习。</p>
+<p>2，GANACHE未找到可以真正本地存储的方法。现存的本地存储上次状态都是存储到内存或者存储为临时文件，并没有实际的区块保存，因此只能像在线Remix网络一样作为测试合约可用性的的测试网络。</p>
+<p>3，分配单机多节点测试以太坊网络。区块同步比预想要效率低下。</p>
+<p>4，从头仔细学习Solidity。加深对一些概念的理解</p>
+<p>5，当前的学习和Dapp开发有较大差异，寻找继续的方向。</p>
+<p>6，做读取大文件测试。学习python读取大文件CSV文件。pandas和dask.dataframe相关学习。</p>
+<h3 id="论文阅读"><a href="#论文阅读" class="headerlink" title="论文阅读"></a>论文阅读</h3><h3 id="下周计划"><a href="#下周计划" class="headerlink" title="下周计划"></a>下周计划</h3><p>1，寻找并学习DAPP开发实例，目的是加深对合约开发的理解。</p>
+<p>2，Nodejs寻找合适的框架进行实践，提高解决问题能力。</p>
+<p>3，专注于Solidity的学习。</p>
+<p>4，公链开发和私链开发区别较大，进行了解。</p>
+]]></content>
+      <categories>
+        <category>week report</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WR20-3-21</title>
     <url>/2020/03/21/WR20-3-21/</url>
     <content><![CDATA[<h3 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h3><p>1，web3和Truffle分别测试部署简单合约到GANACHE没出现问题。但是部署到实际的Geth发现问题。更改web3版本和部署代码及Geth版本，问题未得到解决，资料较少，打算重新部署Geth进行尝试。</p>
