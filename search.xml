@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>go自身特色归纳</title>
+    <url>/2020/08/13/go%E8%87%AA%E8%BA%AB%E7%89%B9%E8%89%B2%E5%BD%92%E7%BA%B3/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>go注意点归纳</title>
     <url>/2020/08/12/go%E6%B3%A8%E6%84%8F%E7%82%B9%E5%BD%92%E7%BA%B3/</url>
     <content><![CDATA[<h3 id="part1-基本语法注意点"><a href="#part1-基本语法注意点" class="headerlink" title="part1 基本语法注意点"></a>part1 基本语法注意点</h3><p><strong>内建变量类型：</strong></p>
@@ -10,15 +15,12 @@
 <p>float32,float64,complex64(32位复数),complex128</p>
 <p><strong>内建容器类型：</strong></p>
 <p>array,slice,map</p>
-<p><strong>（1）分支</strong></p>
-<p>switch语句，switch后可以不写变量名如：</p>
+<h4 id="（1）分支"><a href="#（1）分支" class="headerlink" title="（1）分支"></a>（1）分支</h4><p>switch语句，switch后可以不写变量名如：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>&#123;</span><br><span class="line">    <span class="keyword">case</span> a &lt; <span class="number">10</span>:</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">case</span> a &lt; <span class="number">5</span>:</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>for可以省略起始条件、结束条件、循环条件</p>
-<p><strong>(2)指针</strong></p>
-<p>go语言只有值传递一种方式。go语言的指针不能运算。go语言的结构体实际上是指针指向数据块的结构，也就是结构体函数传递了一个指针，如果要维护原有结构体的话需要传递一个指针，通过封装避免错误。</p>
-<p><strong>(3)数组、切片、map</strong></p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [...]<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//数组</span></span><br><span class="line"><span class="keyword">var</span> arr = []<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//切片</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-指针"><a href="#2-指针" class="headerlink" title="(2)指针"></a>(2)指针</h4><p>go语言只有值传递一种方式。go语言的指针不能运算。go语言的结构体实际上是指针指向数据块的结构，也就是结构体函数传递了一个指针，如果要维护原有结构体的话需要传递一个指针，通过封装避免错误。</p>
+<h4 id="3-数组、切片、map"><a href="#3-数组、切片、map" class="headerlink" title="(3)数组、切片、map"></a>(3)数组、切片、map</h4><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [...]<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//数组</span></span><br><span class="line"><span class="keyword">var</span> arr = []<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//切片</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>数组是值类型。想更改需要使用指针。一般不使用数组，常见使用切片slice。</li>
@@ -39,8 +41,8 @@
 <p>常用内建函数：delete(map,key)</p>
 <p>几乎所有内建类型都可以作为key。除了没法判断相等的slice,map,function。自建类型struct不包含上述三个也可以作为key。</p>
 <ul>
-<li><p>字符字符串的操作：rune的使用。strings包。</p>
-<p><strong>（3）面向“对象”</strong></p>
+<li>字符字符串的操作：rune的使用。strings包。<h4 id="4-面向“对象”"><a href="#4-面向“对象”" class="headerlink" title="(4)面向“对象”"></a>(4)面向“对象”</h4></li>
+</ul>
 <p>go只支持封装，没有继承和多态，只有struct。</p>
 <ul>
 <li><p>结构体没有构造函数，利用自定义工厂函数和接口来操作结构体。go可以返回局部变量的指针来用。go有垃圾回收机制不需要关注局部变量的分配位置在堆上还是栈上。</p>
@@ -48,16 +50,16 @@
 <li><p>结构定义方法使用接收者。实际上和普通函数很类似，接收者可看作参数。</p>
 </li>
 <li><p>想要更改结构体的内部，可以将接收者设为指针类型。但是调用的时候不需要区分，编译器会根据接收者类型自行处理。</p>
-<p>使用技巧：要改变内容用指针接收这；结构过大使用指针接收者；（最好）有指针接收者都是指针接收者</p>
 </li>
+</ul>
+<p><strong>使用技巧：</strong>要改变内容用指针接收这；结构过大使用指针接收者；（最好）有指针接收者都是指针接收者</p>
+<ul>
 <li><p>扩展已有类型的方法有组合、别名和内嵌。组合的方法最常用。别名最简单。内嵌主要是go语言特殊的地方用来节省代码。</p>
 </li>
 <li><p>结构体内嵌扩展属于go的一个语法糖。主要体现在可以省去被内嵌结构体的变量名，如下：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> myStruct <span class="keyword">struct</span>&#123;</span><br><span class="line">    *oldStruct    <span class="comment">//只有类型名，省去变量名</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>内嵌类似其余语言的继承，影子函数类似重载。但是本质上不是继承，实际上两个结构体没有本质的联系。比如go无法实现其他函数的继承的做法，如将子类指针想要赋值给基类指针，利用基类指针调用重载函数。这一目的通过接口实现。</p>
-</li>
-</ul>
+<p>​        内嵌类似其余语言的继承，影子函数类似重载。但是本质上不是继承，实际上两个结构体没有本质的联系。比如go无法实现其他函数的继承的做法，如将子类指针想要赋值给基类指针，利用基类指针调用重载函数。这一目的通过接口实现。</p>
 </li>
 </ul>
 ]]></content>
