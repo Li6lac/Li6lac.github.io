@@ -132,7 +132,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">9</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">10</span></a>
 
   </li>
   </ul>
@@ -157,6 +157,90 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lilac18.cn/2020/08/16/go%E8%B5%B0%E8%BF%B7%E5%AE%AB%E4%BB%A5%E5%8F%8Ahttp%E5%BA%93%E4%BA%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Lilac">
+      <meta itemprop="description" content="Strengthen Yourself To Be Against World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lilac's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/16/go%E8%B5%B0%E8%BF%B7%E5%AE%AB%E4%BB%A5%E5%8F%8Ahttp%E5%BA%93%E4%BA%86%E8%A7%A3/" class="post-title-link" itemprop="url">go走迷宫以及http库了解</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-16 09:08:04 / 修改时间：09:12:24" itemprop="dateCreated datePublished" datetime="2020-08-16T09:08:04+08:00">2020-08-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/go/" itemprop="url" rel="index">
+                    <span itemprop="name">-go</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>0</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          爬虫项目准备
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/16/go%E8%B5%B0%E8%BF%B7%E5%AE%AB%E4%BB%A5%E5%8F%8Ahttp%E5%BA%93%E4%BA%86%E8%A7%A3/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -192,7 +276,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-16 09:04:54" itemprop="dateModified" datetime="2020-08-16T09:04:54+08:00">2020-08-16</time>
+                <time title="修改时间：2020-08-16 09:12:03" itemprop="dateModified" datetime="2020-08-16T09:12:03+08:00">2020-08-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -201,7 +285,7 @@
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/go/" itemprop="url" rel="index">
-                    <span itemprop="name">go</span>
+                    <span itemprop="name">-go</span>
                   </a>
                 </span>
             </span>
@@ -224,99 +308,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="part2-go高级用法特色总结"><a href="#part2-go高级用法特色总结" class="headerlink" title="part2 go高级用法特色总结"></a>part2 go高级用法特色总结</h2><h4 id="1-面向接口"><a href="#1-面向接口" class="headerlink" title="1 面向接口"></a>1 面向接口</h4><p>接口的目的。相当于为了解耦合。不同模块实现一个目的可能不同，在总的调用时只关心实现了函数没有，不关心函数内部是什么。即，go语言接口关心的是是否实现接口函数而不是实现接口。实现接口函数相当于实现接口。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getRetriver</span><span class="params">()</span> <span class="title">retriever</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> testing.Retriver&#123;&#125;  <span class="comment">//真正实用的retriver</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ?:Something that can "Get"</span></span><br><span class="line"><span class="keyword">type</span> retriver <span class="keyword">interface</span> &#123;</span><br><span class="line">    Get(<span class="keyword">string</span>) <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> r retriver = getRetriver()</span><br><span class="line">    fmt.Println(r.Get(<span class="string">"https://www.baidu.com"</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>duck typing:</strong></p>
-<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200813094440-737531.png" alt="image-20200813094439318"></p>
-<p>大黄鸭是不是鸭子？</p>
-<p>对于传统定义来说大黄鸭不是鸭子，因为没有生命。</p>
-<p>但是对于duck typing角度来说就是鸭子：像鸭子，有鸭子的特征。</p>
-<p><font color="red">duck typing描述事物的外部行为而不是内部结构</font></p>
-<p>python的接口需要注释声明实现者需要实现接口的什么函数。java不需要注释，java直接要求实现整个接口。也就是说java的接口实际上不属于duck typing，并且java没法组合使用接口。go语言综合了上述有点，不需要实现接口也不需要注释，但是还可以保证接口实现检查，其次可以实现接口的组合使用。</p>
-<p>（1）实现者和使用者。和传统语言不同的是，go的接口是使用者来定义的，实现者只需隐式地实现接口，即实现者实现使用者规定的方法就等于实现了接口。</p>
-<p>（2）接口变量的组成。是由实现者的类型和实现者的指针组成。几乎不使用接口的指针，因为接口变量自带指针。指针接收者实现只能以指针的方式使用，值接收者都可以。</p>
-<p>（3）任意类型</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>任意类型的类型判断是.(type)，即type assertion 。</p>
-<p>（4）接口的组合。接口的组合也是使用者来定义的。实现者只需实现方法，不需要关注使用者到底是什么接口。</p>
-<p><strong>常用系统接口：</strong></p>
-<ul>
-<li>stringer，需要实现String()</li>
-<li>reader，需要实现Read()</li>
-<li>writer，需要实现Write()</li>
-</ul>
-<p>reader 和 writer 不仅可以用于文件读写，也可以用于网络的读写，或者[]byte,string等等都可以用。</p>
-<h4 id="2-函数式编程"><a href="#2-函数式编程" class="headerlink" title="2 函数式编程"></a>2 函数式编程</h4><p>函数是一等公民，参数、变量、返回值都可以是函数。</p>
-<p><strong>闭包：</strong></p>
-<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200813113644-722293.png" alt="image-20200813113643403"></p>
-<p>闭包针对的是作为返回值的函数而言。自由变量指的是不在闭包函数内部的变量。也就是主调函数的变量或者外部传入的变量。闭包函数返回时返回的是一个闭包，及闭包函数本身以及它的局部变量的值以及自由变量的值。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">adder</span><span class="params">()</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    sum := <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">func</span><span class="params">(v <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">        sum += v</span><br><span class="line">        <span class="keyword">return</span> sum</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    a := adder()</span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++&#123;</span><br><span class="line">        fmt.Printf(<span class="string">"0+1+...+%d=%d"</span>,i,a(i))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>个人理解：可以理解为此处闭包的目的是为了每次将sum存起来，也就是将函数adder()赋值给a作为一个变量的目的。相当于这个状态是保存在a里的。所以每次调用a(i)的话实际上a的sum是上次结束更改后的值。而adder()函数的目的是计算上的处理，实际的值由a决定。</p>
-<p>闭包的使用依赖于设定一个变量接收函数作为生成器。</p>
-<p>函数作为一等公民可以实现接口，也可以作为参数传递。</p>
-<h4 id="3-资源管理和错误处理"><a href="#3-资源管理和错误处理" class="headerlink" title="3 资源管理和错误处理"></a>3 资源管理和错误处理</h4><p><strong>资源管理：</strong>defer 在函数退出时执行，进行资源管理。defer内部有一个栈是先进后出的，不过不太需要关注这个点。defer使用场景：open/close,lock/unlock,printheader/printfooter。</p>
-<p><strong>错误处理：</strong>实际上就是尽力避免panic。把已知的err处理了，然后return。未知的error使用panic。</p>
-<p><font color="red"> panic: </font>停止当前函数执行。一直向上返回，执行每一层defer。没有遇到recover程序退出。</p>
-<p><font color="blue"> recover: </font>仅在defer调用中使用，获取panic的值，如果无法处理可重新panic。</p>
-<h4 id="4-测试和性能调优-了解"><a href="#4-测试和性能调优-了解" class="headerlink" title="4 测试和性能调优 //了解"></a>4 测试和性能调优 //了解</h4><p><strong>表格驱动测试：</strong>go写表格驱动测试很方便。文件命名以_test.go结束。测试函数名以Test开头，参数为t *testing.T类型，出错调用t.Errorf()显示打印。</p>
-<p>此外，测试还可以利用命令行:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go test .</span><br></pre></td></tr></table></figure>
-
-<p><strong>代码覆盖率：</strong>IDE操作或者命令行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go test -coverprofile&#x3D;c.out</span><br><span class="line">go tool cover -html&#x3D;c.out</span><br></pre></td></tr></table></figure>
-
-<p><strong>性能测试：</strong>测试函数以Benchmark开头，参数为b *testing.B。选取较复杂的测试样例。出错调用b.Errof()显示打印。较复杂的样例做很多遍，遍数不是人规定，由b.N决定。也可以使用命令行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go test -bench .</span><br></pre></td></tr></table></figure>
-
-<p><strong>性能调优：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">go test -bench . -cpuprofile cpu.out</span><br><span class="line">go tool pprof cpu.out</span><br><span class="line">&gt;&gt;web</span><br><span class="line">&#x2F;&#x2F;需要安装graphviz再使用web</span><br></pre></td></tr></table></figure>
-
-<p>性能图里方框越大、线条越粗表示花费时间越多的地方，可以进行代码优化。</p>
-<p><strong>生成文档和示例代码：</strong></p>
-<p>文档内容就是注释解释的函数的功能</p>
-<p>下载godoc：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get golang.org&#x2F;x&#x2F;tools&#x2F;cmd&#x2F;godoc</span><br></pre></td></tr></table></figure>
-
-<p>利用工具godoc：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">godoc -http :6060</span><br></pre></td></tr></table></figure>
-
-<p>go 文件内部：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数功能描述                 ---&gt;文档</span></span><br><span class="line"><span class="comment">//    eg.                     ---&gt;带框文档</span></span><br></pre></td></tr></table></figure>
-
-<p>示例代码：</p>
-<p>在test文件内,是一种特殊的test，之后可以godoc查看</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Example</span>包名_函数名（）</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">//Output:</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-Goroutine"><a href="#5-Goroutine" class="headerlink" title="5 Goroutine"></a>5 Goroutine</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> a [<span class="number">10</span>]<span class="keyword">int</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">			<span class="keyword">for</span> &#123;</span><br><span class="line">				a[i]++</span><br><span class="line">				<span class="comment">//runtime.Gosched()</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;(i)</span><br><span class="line">	&#125;</span><br><span class="line">	time.Sleep(<span class="number">5</span> * time.Millisecond)</span><br><span class="line">	fmt.Println(a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实际上这里goroutine内部写和main打印有一定的数据冲突。需要通过channel解决。goroutine是轻量级的线程—协程，非抢占式多任务处理。</p>
-<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200814113426-312210.png" alt="image-20200814113425381"></p>
-<p>普通函数：子函数从main函数数获得控制权执行结束返回控制权和数据。</p>
-<p>协程：子函数和main由两个协程进行，控制权和数据在执行过程不断交替，有一个通道。</p>
-<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200814113911-682794.png" alt="image-20200814113909896"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用go run -race file.go 进行数据冲突检测</span><br></pre></td></tr></table></figure>
-
-<p>goroutine可能切换点：只是参考，不能保证参考，也不能保证其他地方不切换</p>
-<p>(1)I/O，select (2)channel (3)等待锁 (4)函数调用（有时） (5)runtime.Gosched() </p>
-<h4 id="6-Channel"><a href="#6-Channel" class="headerlink" title="6 Channel"></a>6 Channel</h4><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200815115033-583286.png" alt="image-20200815115032401"></p>
-<p>Channel是两个goroutine之间的通道。channel的箭头代表了channel的类型，指向channel表示channel是send类型，该channel只能发数据；由channel指出去表示channel是receive类型，该channel只能收数据。</p>
-<p><strong>bufferedChannel:</strong>建立channel的时候设立缓冲区，可以提升性能</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<p>channel可以用range来收进行关闭。</p>
-<span class="label success">“不要通过共享内存来通信，通过通信来共享内存”</span>
-
-<p><strong>使用channel等待任务结束：</strong></p>
-<p>借助库sync.WaitGroup。利用wg.Add(),wg.Done(),wg.Wait()三个函数</p>
-<p>单任务结束直接close通道即可。</p>
-<p><strong>使用select进行调度：</strong></p>
-<p>两个channel，谁先来想收谁的数据，利用select</p>
-<p>定时器的使用。在select中使用nil channel</p>
-<p><strong>传统同步机制了解：</strong>WaitGroup,Mutex,Cond。传统机制用的很少，基本都是用channel。</p>
-
+          语言特色
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/13/go%E8%87%AA%E8%BA%AB%E7%89%B9%E8%89%B2%E5%BD%92%E7%BA%B3/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -349,7 +349,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/12/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%B3%A8%E6%84%8F%E7%82%B9%E5%BD%92%E7%BA%B3/" class="post-title-link" itemprop="url">基本语法注意点归纳</a>
+            <a href="/2020/08/12/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%B3%A8%E6%84%8F%E7%82%B9%E5%BD%92%E7%BA%B3/" class="post-title-link" itemprop="url">go基本语法注意点归纳</a>
         </h1>
 
         <div class="post-meta">
@@ -366,7 +366,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-13 11:09:19" itemprop="dateModified" datetime="2020-08-13T11:09:19+08:00">2020-08-13</time>
+                <time title="修改时间：2020-08-16 09:11:38" itemprop="dateModified" datetime="2020-08-16T09:11:38+08:00">2020-08-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -375,7 +375,7 @@
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/go/" itemprop="url" rel="index">
-                    <span itemprop="name">go</span>
+                    <span itemprop="name">-go</span>
                   </a>
                 </span>
             </span>
@@ -398,61 +398,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="part1-基本语法注意点"><a href="#part1-基本语法注意点" class="headerlink" title="part1 基本语法注意点"></a>part1 基本语法注意点</h3><p><strong>内建变量类型：</strong></p>
-<p>bool,string,</p>
-<p>(u)int,(int8,int16,int32,int64,intptr)</p>
-<p>byte(8位，相当于int8别名),rune(32位也就是char,相当于int32别名)</p>
-<p>float32,float64,complex64(32位复数),complex128</p>
-<p><strong>内建容器类型：</strong></p>
-<p>array,slice,map</p>
-<h4 id="（1）分支"><a href="#（1）分支" class="headerlink" title="（1）分支"></a>（1）分支</h4><p>switch语句，switch后可以不写变量名如：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>&#123;</span><br><span class="line">    <span class="keyword">case</span> a &lt; <span class="number">10</span>:</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">case</span> a &lt; <span class="number">5</span>:</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>for可以省略起始条件、结束条件、循环条件</p>
-<h4 id="2-指针"><a href="#2-指针" class="headerlink" title="(2)指针"></a>(2)指针</h4><p>go语言只有值传递一种方式。go语言的指针不能运算。go语言的结构体实际上是指针指向数据块的结构，也就是结构体函数传递了一个指针，如果要维护原有结构体的话需要传递一个指针，通过封装避免错误。</p>
-<h4 id="3-数组、切片、map"><a href="#3-数组、切片、map" class="headerlink" title="(3)数组、切片、map"></a>(3)数组、切片、map</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [...]<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//数组</span></span><br><span class="line"><span class="keyword">var</span> arr = []<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//切片</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>数组是值类型。想更改需要使用指针。一般不使用数组，常见使用切片slice。</li>
-<li>slice是对数组的一个view。slice可以多次reslice。slice是可以向后扩展的。</li>
-</ul>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>]<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">s1 := arr[<span class="number">1</span>:<span class="number">4</span>]<span class="comment">//[2,3,4]</span></span><br><span class="line">s2 := s1[<span class="number">2</span>:<span class="number">4</span>]<span class="comment">//[4,5]</span></span><br></pre></td></tr></table></figure>
-
-<p>slice底层实现实际上由ptr,len,cap组成。s1下标取是不能超过2的。但是向后扩张s2只要不超过cap就好了。s1的cap是4，s2的cap是2。</p>
-<p>slice如果append超出slice,会分配新的空间。所以需要接收新的slice。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="built_in">append</span>(s,<span class="built_in">new</span>)</span><br></pre></td></tr></table></figure>
-
-<p>常用内建函数：make,copy(dst,src)</p>
-<ul>
-<li>map如果某个键不存在可以通过接收两个值判断。map内部是无序的。</li>
-</ul>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value,ok := m[<span class="string">"not exist key"</span>] <span class="comment">// 返回空串和false</span></span><br></pre></td></tr></table></figure>
-
-<p>常用内建函数：delete(map,key)</p>
-<p>几乎所有内建类型都可以作为key。除了没法判断相等的slice,map,function。自建类型struct不包含上述三个也可以作为key。</p>
-<ul>
-<li>字符字符串的操作：rune的使用。strings包。<h4 id="4-面向“对象”"><a href="#4-面向“对象”" class="headerlink" title="(4)面向“对象”"></a>(4)面向“对象”</h4></li>
-</ul>
-<p>go只支持封装，没有继承和多态，只有struct。</p>
-<ul>
-<li><p>结构体没有构造函数，利用自定义工厂函数和接口来操作结构体。go可以返回局部变量的指针来用。go有垃圾回收机制不需要关注局部变量的分配位置在堆上还是栈上。</p>
-</li>
-<li><p>结构定义方法使用接收者。实际上和普通函数很类似，接收者可看作参数。</p>
-</li>
-<li><p>想要更改结构体的内部，可以将接收者设为指针类型。但是调用的时候不需要区分，编译器会根据接收者类型自行处理。</p>
-</li>
-</ul>
-<p><strong>使用技巧：</strong>要改变内容用指针接收这；结构过大使用指针接收者；（最好）有指针接收者都是指针接收者</p>
-<ul>
-<li><p>扩展已有类型的方法有组合、别名和内嵌。组合的方法最常用。别名最简单。内嵌主要是go语言特殊的地方用来节省代码。</p>
-</li>
-<li><p>结构体内嵌扩展属于go的一个语法糖。主要体现在可以省去被内嵌结构体的变量名，如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> myStruct <span class="keyword">struct</span>&#123;</span><br><span class="line">    *oldStruct    <span class="comment">//只有类型名，省去变量名</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​        内嵌类似其余语言的继承，影子函数类似重载。但是本质上不是继承，实际上两个结构体没有本质的联系。比如go无法实现其他函数的继承的做法，如将子类指针想要赋值给基类指针，利用基类指针调用重载函数。这一目的通过接口实现。</p>
-</li>
-</ul>
-
+          简单语法
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/12/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%B3%A8%E6%84%8F%E7%82%B9%E5%BD%92%E7%BA%B3/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1130,7 +1084,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

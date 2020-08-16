@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>go走迷宫以及http库了解</title>
+    <url>/2020/08/16/go%E8%B5%B0%E8%BF%B7%E5%AE%AB%E4%BB%A5%E5%8F%8Ahttp%E5%BA%93%E4%BA%86%E8%A7%A3/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>-go</category>
+      </categories>
+  </entry>
+  <entry>
     <title>go自身特色归纳</title>
     <url>/2020/08/13/go%E8%87%AA%E8%BA%AB%E7%89%B9%E8%89%B2%E5%BD%92%E7%BA%B3/</url>
     <content><![CDATA[<h2 id="part2-go高级用法特色总结"><a href="#part2-go高级用法特色总结" class="headerlink" title="part2 go高级用法特色总结"></a>part2 go高级用法特色总结</h2><h4 id="1-面向接口"><a href="#1-面向接口" class="headerlink" title="1 面向接口"></a>1 面向接口</h4><p>接口的目的。相当于为了解耦合。不同模块实现一个目的可能不同，在总的调用时只关心实现了函数没有，不关心函数内部是什么。即，go语言接口关心的是是否实现接口函数而不是实现接口。实现接口函数相当于实现接口。</p>
@@ -97,11 +105,11 @@
 <p><strong>传统同步机制了解：</strong>WaitGroup,Mutex,Cond。传统机制用的很少，基本都是用channel。</p>
 ]]></content>
       <categories>
-        <category>go</category>
+        <category>-go</category>
       </categories>
   </entry>
   <entry>
-    <title>基本语法注意点归纳</title>
+    <title>go基本语法注意点归纳</title>
     <url>/2020/08/12/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%B3%A8%E6%84%8F%E7%82%B9%E5%BD%92%E7%BA%B3/</url>
     <content><![CDATA[<h3 id="part1-基本语法注意点"><a href="#part1-基本语法注意点" class="headerlink" title="part1 基本语法注意点"></a>part1 基本语法注意点</h3><p><strong>内建变量类型：</strong></p>
 <p>bool,string,</p>
@@ -159,7 +167,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>go</category>
+        <category>-go</category>
       </categories>
   </entry>
   <entry>
