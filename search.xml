@@ -5,7 +5,7 @@
     <url>/2020/08/16/go%E8%B5%B0%E8%BF%B7%E5%AE%AB%E4%BB%A5%E5%8F%8Ahttp%E5%BA%93%E4%BA%86%E8%A7%A3/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>-go</category>
+        <category>go</category>
       </categories>
   </entry>
   <entry>
@@ -105,7 +105,7 @@
 <p><strong>传统同步机制了解：</strong>WaitGroup,Mutex,Cond。传统机制用的很少，基本都是用channel。</p>
 ]]></content>
       <categories>
-        <category>-go</category>
+        <category>go</category>
       </categories>
   </entry>
   <entry>
@@ -167,7 +167,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>-go</category>
+        <category>go</category>
       </categories>
   </entry>
   <entry>
