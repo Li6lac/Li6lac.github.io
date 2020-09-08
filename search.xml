@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Bitcoin-NG阅读笔记</title>
+    <url>/2020/09/08/Bitcoin-NG%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><strong>论文来源：</strong></p>
+<p>​       NSDI（2016） Ittay Eyal      </p>
+<p><strong>概述：</strong></p>
+<p>​        Bitcoin-NG，一个基于比特币信任模型的可扩展的区块链协议。Bitcoin-NG通过将比特币的区块链操作分解为两部分来实现这个性能改善：首领选择（<code>leader election</code>）和交易序列化（<code>transaction serialization</code>）。它将时间划分为新片段，每一个片段都有单独的首领。在比特币中，首领选择是随意执行的，且不经常发生。一旦选择好首领，它就有资格序列化交易，直到一个新的首领出现，标记在前一个片段的尾部。  </p>
+<p>​        比特币中也有首领选择。但是在比特币中，首领负责序列化历史记录，使得首领选择之间的持续时间成为了长时间的系统冻结。相反，Bitcoin-NG中的首领选择是向前进行的，确保系统能够持续处理交易。    </p>
+<p><strong>关键技术思想：</strong></p>
+<p><strong>A.详细的协议运算</strong></p>
+<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200908093134-536046.png" alt="image-20200908093134218"></p>
+<p>Bitcoin-NG链的结构。微区块（圆圈）是用私钥来签名的，该私钥与最后关键区块（正方形）的公钥相匹配。40%的交易费分发给首领，60%分发给下一个区块。</p>
+<p>​        在Bitcoin-NG中，区块被分成了两种，分别是核心块（key block）和微块（microblock）。矿工们对区块的操作也被分成了两个阶段，分别是选举领导者和打包交易。Bitcoin-NG把时间分成了多个时代（epoch），每一个时代选举出一个领导（leader）。选举领导的过程同比特币的挖矿过程相同，每一个矿工在前一个领导生产的微块的基础上进行挖矿。一旦某个矿工被选定成为领导，他需要把可以验证自己领导身份的信息放到核心块（key block）中，并把它连接到链上。然后这个矿工就可以以预先设定好的速度持续生产微块（microblock），直到下一个矿工在自己生产的微块基础上挖矿成功并成为新的领导者，这也意味着当前领导者的领导时代结束。</p>
+<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200908093443-92546.png" alt="image-20200908093443197"></p>
+<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200908093823-584628.png" alt="image-20200908093823127"></p>
+<p>当有分叉时，在所有关键区块中，由最多算力生成的那条区块链才是主链，这样就打破了僵局。</p>
+<p>目前的首领获得40%的交易费，紧接着的首领获得60%的交易费。事实上，补偿是这样实施的，即每一个关键区块包含一个独立的交易数据库，该数据库用来铸造新币和将资金分发给现有首领和上一个首领。</p>
+<span class="label primary">由于微区块不需要挖矿，首领将不同的重复状态机的状态公布给不同的机器，会造成双花攻击，不同的节点认为同样的币由不同的交易花费</span>  
+
+<span class="label primary">本文使用了专门的账本来作废欺骗者的收益，即污染交易，包含了修剪分支的第一个区块的数据作为欺骗证据。污染交易必须在首领花费这些收益之前放置在下一个关键区块后面。污染交易还会给现在的首领分发部分补偿如5%</span>
+
+<p><strong>B.安全分析</strong></p>
+<p>激励机制</p>
+]]></content>
+      <categories>
+        <category>阅读笔记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>广度优先走迷宫以及http等基本库了解</title>
     <url>/2020/08/16/go%E8%B5%B0%E8%BF%B7%E5%AE%AB%E4%BB%A5%E5%8F%8Ahttp%E5%BA%93%E4%BA%86%E8%A7%A3/</url>
     <content><![CDATA[<h3 id="广度优先算法走迷宫"><a href="#广度优先算法走迷宫" class="headerlink" title="广度优先算法走迷宫"></a>广度优先算法走迷宫</h3><p>思路：节点分为三个状态：未发现，发现未探索，已探索</p>
