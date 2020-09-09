@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-09-08T03:23:57.919Z</updated>
+  <updated>2020-09-09T06:21:15.594Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>idea 雏形</title>
+    <link href="https://lilac18.cn/2020/09/09/idea-%E9%9B%8F%E5%BD%A2/"/>
+    <id>https://lilac18.cn/2020/09/09/idea-%E9%9B%8F%E5%BD%A2/</id>
+    <published>2020-09-09T06:20:00.000Z</published>
+    <updated>2020-09-09T06:21:15.594Z</updated>
+    
+    <summary type="html">
+    
+      idea最开始大概的想法
+    
+    </summary>
+    
+    
+      <category term="idea" scheme="https://lilac18.cn/categories/idea/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Bitcoin-NG阅读笔记</title>
