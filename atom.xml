@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-09-09T06:21:15.594Z</updated>
+  <updated>2020-09-12T07:05:51.077Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OHIE阅读笔记</title>
+    <link href="https://lilac18.cn/2020/09/12/OHIE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>https://lilac18.cn/2020/09/12/OHIE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-09-12T05:43:53.000Z</published>
+    <updated>2020-09-12T07:05:51.077Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>论文来源：</strong></p><p>S&amp;P 2020  Haifeng Yu  </p><p><strong>概述：</strong></p><p>OHIE 介绍了一种并行的区块链结构和新的区块确认机制。理论性证明了安全性和效率提高。设计思路对于我的算力重利用Idea有较大启发，合理利用可以做到正真意义上的算力利用。</p><p><strong>设计细节：</strong></p><p>在比特币里，B区块从已经存在的A区块扩展。B区块包含A区块的哈希值。因此建立连接。</p><p>在OHIE里，矿工挖矿之前不知道新的快要连接到哪条链上。最后的k位决定了新块的位置，即新块属于哪一条链。</p><p>为了解决这个问题，OHIE中矿工链接每条链的最后一个块进行merkle根计算。利用merkle根的值进行PoW的输入数据。得到的值更具最后的k位代表新块的位置。此处采取的merkle证明是标准的merkle证明。</p><p>挖矿的过程站在多个矿工的角度看待问题，一个时隙同时产生2^K个块儿都可以加入体系。</p><p>确认环节：（SCB确认区块序列）</p><p><img src="/.cn//C:%5CUsers%5Clilac%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200912144601166.png" alt="image-20200912144601166"></p><p>T表示不稳定参数。T=2表示最后两个块默认是不稳定的。</p><p>每一个出块的时间间隔都是是稳定快可当作确认块。确认块的个数是结构纵向的一个数为了保证部分确认块最小。不稳定块出外所有的块都是部分确认块。</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20200912145003-693225.png" alt="image-20200912145001967"></p><p>在上述部分确认-完全确认块的基础上引入成对标记（rank,next_rank），所有块儿都需要这个标记，包括不是部分确认的块儿。</p><p>初始的每条链的第一个块都是（0，1）,具体确认过程如图。</p>]]></content>
+    
+    <summary type="html">
+    
+      OHIE提出一种并行的多条链结构
+    
+    </summary>
+    
+    
+      <category term="阅读笔记" scheme="https://lilac18.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>idea 雏形</title>
