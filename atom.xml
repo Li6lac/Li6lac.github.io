@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-10-23T07:00:28.442Z</updated>
+  <updated>2020-10-23T07:24:54.641Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FruitChains阅读整理</title>
+    <link href="https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/"/>
+    <id>https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/</id>
+    <published>2020-10-23T07:23:51.000Z</published>
+    <updated>2020-10-23T07:24:54.641Z</updated>
+    
+    <content type="html"><![CDATA[<p>*<em>论文题目：FruitChains: A Fair Blockchain  *</em></p><p><strong>论文来源：PODC2017（CCF-B）</strong></p><p>主要目的：为了使得区块链的奖励更加公平。拥有多少算力的矿工可以得到多少奖励。</p><p>问题来源：由于矿池的存在，自私挖矿等风险，但对的矿工能够获取的奖励实际上并不能达到自己算力所占份额的。作者认为这是因为当前奖励机制单一化造成的，将矿工能得到的奖励分为挖矿奖励和交易费用两个部分，对这两个部分的处理过程进行单独分离可以缓解上述问题。做到所谓的奖励公平。</p><p>主体思想：</p><p>区块链中存在两种形式的区块。区块和水果。他们本质上的数据结构是相似的。根据不同的挖矿难度或者不同的标记，矿工可以得到这两种东西。</p><p>初始有一个创世区块，矿工基于它挖出水果。或者区块，区块是包含水果的。水果包含交易。水果是“悬挂”到某个区块上的。包含水果的区块距离悬挂水果的区块不能太远。</p><p>总结：思想和GHOST有相似，但是GHOST是引用和奖励。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;*&lt;em&gt;论文题目：FruitChains: A Fair Blockchain  *&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;论文来源：PODC2017（CCF-B）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主要目的：为了使得区块链的奖励更加公平。拥有多少算力的矿工可以得到多少奖
+      
+    
+    </summary>
+    
+    
+      <category term="阅读笔记" scheme="https://lilac18.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Prism阅读整理</title>

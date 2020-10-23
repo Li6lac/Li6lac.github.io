@@ -20,18 +20,20 @@
     var CONFIG = {"hostname":"lilac18.cn","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Strengthen Yourself To Be Against World">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lilac&#39;s Blog">
-<meta property="og:url" content="https://lilac18.cn/archives/2020/02/index.html">
+  <meta name="description" content="*论文题目：FruitChains: A Fair Blockchain  * 论文来源：PODC2017（CCF-B） 主要目的：为了使得区块链的奖励更加公平。拥有多少算力的矿工可以得到多少奖励。 问题来源：由于矿池的存在，自私挖矿等风险，但对的矿工能够获取的奖励实际上并不能达到自己算力所占份额的。作者认为这是因为当前奖励机制单一化造成的，将矿工能得到的奖励分为挖矿奖励和交易费用两个部分，对这两">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FruitChains阅读整理">
+<meta property="og:url" content="https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/index.html">
 <meta property="og:site_name" content="Lilac&#39;s Blog">
-<meta property="og:description" content="Strengthen Yourself To Be Against World">
+<meta property="og:description" content="*论文题目：FruitChains: A Fair Blockchain  * 论文来源：PODC2017（CCF-B） 主要目的：为了使得区块链的奖励更加公平。拥有多少算力的矿工可以得到多少奖励。 问题来源：由于矿池的存在，自私挖矿等风险，但对的矿工能够获取的奖励实际上并不能达到自己算力所占份额的。作者认为这是因为当前奖励机制单一化造成的，将矿工能得到的奖励分为挖矿奖励和交易费用两个部分，对这两">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-23T07:23:51.000Z">
+<meta property="article:modified_time" content="2020-10-23T07:24:54.641Z">
 <meta property="article:author" content="Lilac">
 <meta property="article:tag" content="像花一样，芳香四溢">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lilac18.cn/archives/2020/02/">
+<link rel="canonical" href="https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/">
 
 
 <script id="page-configurations">
@@ -39,11 +41,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>归档 | Lilac's Blog</title>
+  <title>FruitChains阅读整理 | Lilac's Blog</title>
   
 
 
@@ -156,89 +158,120 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 16 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Lilac">
+      <meta itemprop="description" content="Strengthen Yourself To Be Against World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lilac's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          FruitChains阅读整理
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-10-23 15:23:51 / 修改时间：15:24:54" itemprop="dateCreated datePublished" datetime="2020-10-23T15:23:51+08:00">2020-10-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读笔记</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>400</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-24T16:53:53+08:00"
-              content="2020-02-24">
-          02-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/24/image-test/" itemprop="url">
-            <span itemprop="name">image-test</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-24T15:43:00+08:00"
-              content="2020-02-24">
-          02-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/24/WR20-2-22/" itemprop="url">
-            <span itemprop="name">WR20-2-22</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-18T14:30:59+08:00"
-              content="2020-02-18">
-          02-18
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/18/Hello/" itemprop="url">
-            <span itemprop="name">Hello,Hexo</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+        <p>*<em>论文题目：FruitChains: A Fair Blockchain  *</em></p>
+<p><strong>论文来源：PODC2017（CCF-B）</strong></p>
+<p>主要目的：为了使得区块链的奖励更加公平。拥有多少算力的矿工可以得到多少奖励。</p>
+<p>问题来源：由于矿池的存在，自私挖矿等风险，但对的矿工能够获取的奖励实际上并不能达到自己算力所占份额的。作者认为这是因为当前奖励机制单一化造成的，将矿工能得到的奖励分为挖矿奖励和交易费用两个部分，对这两个部分的处理过程进行单独分离可以缓解上述问题。做到所谓的奖励公平。</p>
+<p>主体思想：</p>
+<p>区块链中存在两种形式的区块。区块和水果。他们本质上的数据结构是相似的。根据不同的挖矿难度或者不同的标记，矿工可以得到这两种东西。</p>
+<p>初始有一个创世区块，矿工基于它挖出水果。或者区块，区块是包含水果的。水果包含交易。水果是“悬挂”到某个区块上的。包含水果的区块距离悬挂水果的区块不能太远。</p>
+<p>总结：思想和GHOST有相似，但是GHOST是引用和奖励。</p>
 
     </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Lilac
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/" title="FruitChains阅读整理">https://lilac18.cn/2020/10/23/FruitChains阅读整理-1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/23/Prism%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86/" rel="prev" title="Prism阅读整理">
+      <i class="fa fa-chevron-left"></i> Prism阅读整理
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
