@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-10-23T07:24:54.641Z</updated>
+  <updated>2020-10-23T08:00:28.528Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Prism阅读笔记</title>
+    <link href="https://lilac18.cn/2020/10/23/Prism%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>https://lilac18.cn/2020/10/23/Prism%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-10-23T07:28:47.000Z</published>
+    <updated>2020-10-23T08:00:28.528Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>论文题目：Prism: Deconstructing the blockchain to approach physical limits</strong></p><p><strong>论文来源：CCS2019</strong></p><p><strong>主要目的：</strong>比特币性能距离物理限制很远。</p><p>衡量比特性能的指标：</p><ul><li>β恶意算力比例</li><li>λ交易吞吐量：每秒可确认的交易数量，比特币为7TPS</li><li>τ：交易的确认等待延迟，比特币为6个区块的时间</li></ul><p>物理限制指标：</p><p>C：物理带宽，每秒可以承载的数据量，本文用每秒可以承载的交易数量来衡量</p><p>D：光速的传播延迟</p><p><font color="red">CD指标表示“在空中”的数据量，本文可以理解为在传播中的交易</font></p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023154143-866694.png" alt="image-20201023154142008"></p><p><strong>论文贡献：</strong></p><p>本文提出了一个新的PoW协议，Prism，它实现了以下几点：</p><p>（1）具有可以抵御少于50%恶意算力的安全性；</p><p>（2）具有可以接近网络容量C上限的吞吐量；</p><p>（3）当确认错误概率ε是指数级小于带宽时延迟CD时，诚实交易的确认等待时间和光速传播延迟D成比例的。</p><p>（4）最终有完整交易确认顺序。</p><p><strong>论文idea出发点：</strong></p><p>当前区块链的问题：</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023154331-436592.png" alt="image-20201023154330044"></p><p>不受限制提高挖矿速率和区块大小的问题：</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023154449-13980.png" alt="image-20201023154447168"></p><p>本文的idea:功能解构比特币，根据确认等待时间和吞吐量，进行扩容设计，达到物理限制</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023154646-613748.png" alt="image-20201023154644884"></p><p><strong>论文方案：</strong></p><p><img src="/.cn//C:%5CUsers%5Clilac%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201023154730889.png" alt="image-20201023154730889"></p><p>可以进一步扩展</p><p><img src="/.cn//C:%5CUsers%5Clilac%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201023154745128.png" alt="image-20201023154745128"></p><p><strong><font color="green">详细实现</font></strong></p><p>数据结构</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023154848-174702.png" alt="image-20201023154848162"></p><p>具体的POW过程：</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023155026-238373.png" alt="image-20201023154910041"></p><p>需要注意的点：</p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023155118-729862.png" alt="image-20201023155113233"></p><p>交易列表设计：</p><p>列表确认，同层多个提交区块可以暂时放到列表里都确认，而不需要马上获取leader。这个设计可以做到交易确认可以早于账本确定。transaction confirmed earlier than transaction ordered.</p><p><img src="/.cn//C:%5CUsers%5Clilac%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201023155331324.png" alt="image-20201023155331324"></p><p><strong>分析与总结：</strong></p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023155440-934250.png" alt="image-20201023155440077"></p><p>保守来看，Prism的每个投票树都是和比特币一样的最长连原则，出现分叉需要k-deep规则，但是基于其快速的交易确认机制以及多条投票链整合的作用，实际投票确认还是很快的。</p><p>针对提交区块的情况直观分析有两种。</p><p><font color="blue">情况1：</font>交易区块TB由一个孤立的提交区块指向。同一层只有一个公开的提交区块。这是很常见的，如果投票树较多时。</p><p>攻击者挖一个私有的提交区块A，在每个投票树的进行分叉，在分叉链上挖矿，给A投票。就算H被选为leader，攻击者还可以继续在分叉的投票树上挖矿，给A投票，企图改写，如果票数超过H，理论上是可以成功的。</p><p>*<font color="red">注意：上代链接是PoW之后填充的。</font>*</p><p>情况1的解决办法：</p><p>在2-deep等待1000张投票。这个时间远低于单一链等待24个区块的时间。</p><p><font color="blue">情况2：</font>交易区块TB由H1指向，H1不是孤立提交块。由一个恶意的公有提交块A1竞争，竞争者A1也可以是诚实的。A是恶意的私有提交区块。这个竞争可以持续L层，直到一个孤立的诚实提交区块出现。图中L=1。</p><p>根据TB是诚实交易还是双花交易讨论。</p><p>诚实交易：</p><p>最直接的办法就是一直等待知道可以确认H1或者A1。但是是很慢的，因为攻击者试图去平衡票数。</p><p>解决办法：不是单一确认，而是列表确认。就算A1被确认，诚实的H2可以引用TB。</p><p>快速的列表确认可以防止攻击者试图产生多于H1或者A1票数的私有区块A。</p><p>双花交易：</p><p>解决办法：单一的区块确认，一出现列表确认就确认谁是最后的leader。</p><p><strong>理论结果：</strong></p><p><img src="/.cn//C:%5CUsers%5Clilac%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201023155849097.png" alt="image-20201023155849097"></p><p><strong>实验结构：</strong></p><p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20201023155932-673451.png" alt="image-20201023155930714"></p><p><img src="/.cn//C:%5CUsers%5Clilac%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201023155952311.png" alt="image-20201023155952311"></p><p><strong>个人总结：</strong></p><p>​    Prism依据区块不同功能对比特币协议进行了解构，将区块划分为三种类型，针对吞吐量和交易确认时间进行“结构化DAG”扩展设计，证明了对区块链进行功能解构是可以做到物理资源充分利用的。</p><p>个人总结：</p><p>​    本文和我们所进行的工作的相关的，涉及到了多链结构和分离设计。</p><p>​    区别在于Prism调节难度阈值对区块分类，而我们调节难度值不影响记账权力，Prism的分离结构设计更准确说是分类，我们的分离设计更准确说是拆分。</p><p>   Prism的整体设计很大胆，可以和我们的想法对比思考。Prism的性能证明是理论化的，该团队的同源文章可能有实际的数据基础。</p>]]></content>
+    
+    <summary type="html">
+    
+      分离区块链的三种角色进行功能解构
+    
+    </summary>
+    
+    
+      <category term="阅读笔记" scheme="https://lilac18.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>FruitChains阅读整理</title>
     <link href="https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/"/>
     <id>https://lilac18.cn/2020/10/23/FruitChains%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86-1/</id>
     <published>2020-10-23T07:23:51.000Z</published>
-    <updated>2020-10-23T07:24:54.641Z</updated>
+    <updated>2020-10-23T07:28:09.434Z</updated>
     
     <content type="html"><![CDATA[<p>*<em>论文题目：FruitChains: A Fair Blockchain  *</em></p><p><strong>论文来源：PODC2017（CCF-B）</strong></p><p>主要目的：为了使得区块链的奖励更加公平。拥有多少算力的矿工可以得到多少奖励。</p><p>问题来源：由于矿池的存在，自私挖矿等风险，但对的矿工能够获取的奖励实际上并不能达到自己算力所占份额的。作者认为这是因为当前奖励机制单一化造成的，将矿工能得到的奖励分为挖矿奖励和交易费用两个部分，对这两个部分的处理过程进行单独分离可以缓解上述问题。做到所谓的奖励公平。</p><p>主体思想：</p><p>区块链中存在两种形式的区块。区块和水果。他们本质上的数据结构是相似的。根据不同的挖矿难度或者不同的标记，矿工可以得到这两种东西。</p><p>初始有一个创世区块，矿工基于它挖出水果。或者区块，区块是包含水果的。水果包含交易。水果是“悬挂”到某个区块上的。包含水果的区块距离悬挂水果的区块不能太远。</p><p>总结：思想和GHOST有相似，但是GHOST是引用和奖励。</p>]]></content>
     
@@ -38,21 +59,6 @@
     
     
       <category term="阅读笔记" scheme="https://lilac18.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Prism阅读整理</title>
-    <link href="https://lilac18.cn/2020/10/23/Prism%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86/"/>
-    <id>https://lilac18.cn/2020/10/23/Prism%E9%98%85%E8%AF%BB%E6%95%B4%E7%90%86/</id>
-    <published>2020-10-23T07:00:28.000Z</published>
-    <updated>2020-10-23T07:00:28.442Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
     
   </entry>
