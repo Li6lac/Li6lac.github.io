@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lilac18.cn/"/>
-  <updated>2020-10-23T08:00:28.528Z</updated>
+  <updated>2021-03-22T08:23:42.037Z</updated>
   <id>https://lilac18.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论文阅读笔记《Order-Fair Consensus in the Permissionless Setting》</title>
+    <link href="https://lilac18.cn/2021/03/22/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E3%80%8AOrder-Fair-Consensus-in-the-Permissionless-Setting%E3%80%8B/"/>
+    <id>https://lilac18.cn/2021/03/22/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E3%80%8AOrder-Fair-Consensus-in-the-Permissionless-Setting%E3%80%8B/</id>
+    <published>2021-03-22T08:16:43.000Z</published>
+    <updated>2021-03-22T08:23:42.037Z</updated>
+    
+    <content type="html"><![CDATA[<p>《Order-Fair Consensus in the Permissionless Setting》2021-2-8</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;《Order-Fair Consensus in the Permissionless Setting》2021-2-8&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="阅读笔记" scheme="https://lilac18.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Prism阅读笔记</title>
