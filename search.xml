@@ -3,7 +3,21 @@
   <entry>
     <title>论文阅读笔记《Order-Fair Consensus in the Permissionless Setting》</title>
     <url>/2021/03/22/%E9%98%85%E8%AF%BB%E3%80%8AOrder-Fair-Consensus-in-the-Permissionless-Setting%E3%80%8B/</url>
-    <content><![CDATA[<p>《Order-Fair Consensus in the Permissionless Setting》2021-2-8</p>
+    <content><![CDATA[<h3 id="《Order-Fair-Consensus-in-the-Permissionless-Setting》"><a href="#《Order-Fair-Consensus-in-the-Permissionless-Setting》" class="headerlink" title="《Order-Fair Consensus in the Permissionless Setting》"></a>《Order-Fair Consensus in the Permissionless Setting》</h3><p>发表日期2021-2-8</p>
+<h5 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h5><p>交易进入网络和最终在账本确认的关系没有得到保障。《Order-Fairness  for  Byzantine  Consensus》提出许可环境区块链下的<em>交易顺序公平性（transaction-order-fairness）</em>。本文提出了无许可环境下的顺序公平性。基于同步网络和最长链区块链。认为具有顺序公平性的区块链具备零区块确认的属性（诚实交易可以被安全确认，甚至在它们被包含在区块里之前）。</p>
+<h5 id="关注的核心内容"><a href="#关注的核心内容" class="headerlink" title="关注的核心内容"></a>关注的核心内容</h5><h5 id="Multi-Chain-Protocol"><a href="#Multi-Chain-Protocol" class="headerlink" title="Multi-Chain Protocol"></a>Multi-Chain Protocol</h5><p>g-for-1 PoW mining: Prism,</p>
+<p>2-for-1 trick: Backbone protocol,Fruitchain</p>
+<p>区块表示为（h-1,h’,m,η,h），h-1表示g条链的双亲区块列表，h’表示g条链的引用区块列表，m表示（潜在的）加入到每条链的交易列表，η表示nonce，h表示当前区块的哈希值。</p>
+<p><em>结合FruitChain理解引用区块的目的</em></p>
+<p>本文使得h-1=h’，</p>
+<p>（这里比较模糊，关注<strong>Aequitas</strong>）</p>
+<p><img src="https://lilac-image-1301357031.cos.ap-chengdu.myqcloud.com/undefined/20210323104612-450420.png" alt="image-20210323104610749"></p>
+<h6 id="Zero-Block-Confirmation"><a href="#Zero-Block-Confirmation" class="headerlink" title="Zero-Block Confirmation"></a>Zero-Block Confirmation</h6><p><em>soft-ordering property</em>：  If a transaction tx is received at a honest node more than 2∆time before tx′,then tx is guaranteed to be ordered before tx′in the finalized ledger.</p>
+<p><strong>Soft-ordering is not a direct artifact of network synchrony</strong></p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><h6 id="操作顺序攻击"><a href="#操作顺序攻击" class="headerlink" title="操作顺序攻击"></a>操作顺序攻击</h6><p>[1] Philip  Daian  et  al.  “Flash  Boys  2.0:  Frontrunning  in  Decentralized  Exchanges,  Miner  Ex-tractable Value, and Consensus Instability”. In:IEEE S&amp;P. 2020, pp. 585–602.</p>
+<p>[2]    Shayan   Eskandari   et   al.   “SoK:   Transparent   Dishonesty:   Front-Running   Attacks   onBlockchain”. In:FC. 2019, pp. 170–189.</p>
+<h6 id="减少延迟"><a href="#减少延迟" class="headerlink" title="减少延迟"></a>减少延迟</h6><p>[3]    Matthias Fitzi et al.Ledger Combiners for Fast Settlement. Cryptology ePrint Archive, Report2020/675.<a href="https://ia.cr/2020/675" target="_blank" rel="noopener">https://ia.cr/2020/675</a>. 2020.</p>
+<p>[4]    Chenxin Li et al. “A decentralized blockchain with high throughput and fast confirmation”.In:ATC. 2020, pp. 515–528.</p>
 ]]></content>
       <categories>
         <category>阅读笔记</category>
